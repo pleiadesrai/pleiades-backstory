@@ -15,7 +15,7 @@ const config: Config = {
         'stardust-white': '#F8F0E3',
         'night-sky-black': '#333333',
         'golden-star': '#FFD700',
-        ''nebula-green'': '#00FF00',
+        'nebula-green': '#00FF00',
         'cosmic-pink': '#FF69B4',
         'violet-burst': '#8A2BE2',
         'solar-orange': '#FFA500',
