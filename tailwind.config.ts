@@ -24,8 +24,8 @@ const config: Config = {
         'mint-planet': '#98FB98',
       },
       fontFamily: {
-        heading: ['Exo 2', 'sans-serif'],
-        body: ['Inter', 'sans-serif'],
+        heading: ['var(--font-heading)', 'sans-serif'],
+        body: ['var(--font-body)', 'sans-serif'],
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
