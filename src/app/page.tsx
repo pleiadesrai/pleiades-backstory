@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import CharacterSection from "@/components/CharacterSection";
+import { characters } from "@/data/characters";
 
 export default function Home() {
   return (
@@ -10,18 +12,18 @@ export default function Home() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.5 }}
-        className="flex w-full max-w-5xl flex-col items-center justify-center py-20 px-8"
+        className="flex w-full flex-col items-center justify-center py-20 px-8"
       >
-        <div className="text-center space-y-8">
+        {/* Hero Section */}
+        <div className="min-h-screen flex flex-col items-center justify-center text-center space-y-8">
           <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.8, delay: 1 }}
             className="relative w-48 h-48 mx-auto"
           >
-            {/* Placeholder for a central hero image/logo for Pleiades, if available */}
             <Image
-              src="/public/globe.svg" // Using a placeholder for now
+              src="/images/pleiades-logo-placeholder.svg" // Placeholder for a central hero image/logo
               alt="Pleiades Star Cluster Logo"
               layout="fill"
               objectFit="contain"
@@ -44,6 +46,11 @@ export default function Home() {
             Begin the Journey
           </motion.button>
         </div>
+
+        {/* Character Sections */}
+        {characters.map((character, index) => (
+          <CharacterSection key={character.id} character={character} index={index} />
+        ))}
       </motion.main>
     </div>
   );
